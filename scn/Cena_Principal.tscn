@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scn/Portal.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scn/Cena_Principal.gd" type="Script" id=2]
+[ext_resource path="res://img/bg.jpg" type="Texture" id=3]
+[ext_resource path="res://fnt/pixel-dead-italic.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://snd/ambient.wav" type="AudioStream" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+font_data = ExtResource( 4 )
+
+[node name="Cena_Principal" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 2.0
+margin_top = 3.0
+margin_right = 1026.0
+margin_bottom = 603.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Portal" parent="." instance=ExtResource( 1 )]
+position = Vector2( 512, 622 )
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 0
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1026.0
+margin_bottom = 119.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/line_spacing = -3
+custom_constants/shadow_offset_y = 3
+custom_constants/shadow_as_outline = 3
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ambient" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+
+[connection signal="draw" from="." to="." method="_on_Cena_Principal_draw"]
+[connection signal="resgatou_um_animal_com_o_portal" from="Portal" to="." method="_on_Portal_resgatou_um_animal_com_o_portal"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
