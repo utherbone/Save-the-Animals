@@ -21,19 +21,19 @@ func criarAnimais():
 	
 	match tmp:
 		0:
-			instance = instRaposa.instance()
+			instance = instRaposa.instantiate()
 		1:
-			instance = instFrog.instance()
-		2:
-			instance = instPassaro.instance()
+			instance = instFrog.instantiate()
+		2:	
+			instance = instPassaro.instantiate()
 		3:
-			instance = instVaca.instance()
+			instance = instVaca.instantiate()
 		4:
-			instance = instCat.instance()
-		5:	
-			instance = instCoelho.instance()
+			instance = instCoelho.instantiate()
+		5:
+			instance = instCat.instantiate()
 		6:
-			instance = instDog.instance()
+			instance = instDog.instantiate()
 			
 	instance.position.y = -16
 	instance.position.x = gerador.randf_range(26,1000)

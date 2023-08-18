@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/AnimalSalvo.wav-fd1abd440b954138de3cb37dfdb1bb7d.sample"
+type="AudioStreamWAV"
+uid="uid://dj6o85rg0g5pm"
+path="res://.godot/imported/AnimalSalvo.wav-fd1abd440b954138de3cb37dfdb1bb7d.sample"
 
 [deps]
 
 source_file="res://snd/AnimalSalvo.wav"
-dest_files=[ "res://.import/AnimalSalvo.wav-fd1abd440b954138de3cb37dfdb1bb7d.sample" ]
+dest_files=["res://.godot/imported/AnimalSalvo.wav-fd1abd440b954138de3cb37dfdb1bb7d.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

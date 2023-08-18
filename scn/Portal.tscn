@@ -1,34 +1,34 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://r1tbdx75oxrk"]
 
-[ext_resource path="res://scn/Portal.gd" type="Script" id=1]
-[ext_resource path="res://snd/Portal.wav" type="AudioStream" id=2]
-[ext_resource path="res://img/teleport.png" type="Texture" id=3]
-[ext_resource path="res://snd/AnimalSalvo.wav" type="AudioStream" id=4]
+[ext_resource type="Script" path="res://scn/Portal.gd" id="1"]
+[ext_resource type="AudioStream" uid="uid://bi3h304h42hld" path="res://snd/Portal.wav" id="2"]
+[ext_resource type="Texture2D" uid="uid://cth3dxi7sckxb" path="res://img/teleport.png" id="3"]
+[ext_resource type="AudioStream" uid="uid://dj6o85rg0g5pm" path="res://snd/AnimalSalvo.wav" id="4"]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 29.4778
-height = 73.9751
+[sub_resource type="CapsuleShape2D" id="1"]
+radius = 70.8361
+height = 222.324
 
 [node name="Portal" type="Node2D"]
-script = ExtResource( 1 )
+script = ExtResource("1")
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0, -112.5 )
-texture = ExtResource( 3 )
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -112.5)
+texture = ExtResource("3")
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 0, -112.5 )
+position = Vector2(0, -112.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -4.16223, -1.66388 )
+position = Vector2(-2, -1.5)
 rotation = -1.5708
-shape = SubResource( 1 )
+shape = SubResource("1")
 
 [node name="Vortex" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 2 )
+stream = ExtResource("2")
 autoplay = true
 
 [node name="AnimalSalvo" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource("4")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
