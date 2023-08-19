@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cctko6rs73vdp"]
 
 [ext_resource type="Script" path="res://Animal.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://bwurv6hs13wdt" path="res://img/bird.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bmrv3bhq4fkmd" path="res://img/bird.svg" id="2_fkvap"]
 
 [sub_resource type="CircleShape2D" id="1"]
 radius = 61.4262
@@ -13,4 +13,6 @@ script = ExtResource("1")
 shape = SubResource("1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2")
+position = Vector2(1, 1.6043)
+scale = Vector2(0.300613, 0.300614)
+texture = ExtResource("2_fkvap")
